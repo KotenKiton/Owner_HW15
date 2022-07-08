@@ -20,6 +20,9 @@ dependencies {
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8' // Все языки. Способ их прочтения.
+}
 test {
     // System.getProperties() - вот здесь находится все, что вы передается через -D
     // project.property() - вот здесь находится все, что вы передает через -P

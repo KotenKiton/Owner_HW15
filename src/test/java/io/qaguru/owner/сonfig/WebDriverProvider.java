@@ -29,7 +29,7 @@ public class WebDriverProvider implements Supplier<WebDriver> {
 
             return new ChromeDriver();
         }
-        if (config.getBrowser().equals(Browser.Firefox)) {
+        if (config.getBrowser().equals(Browser.FIREFOX)) {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         }

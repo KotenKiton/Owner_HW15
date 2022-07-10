@@ -1,15 +1,28 @@
 package io.qaguru.owner.сonfig;
 
+import org.aeonbits.owner.Config;
 
-public class WebDriverConfig {
+import java.net.URL;
 
-    public String getBaseUrl() {
-        return "https://github.com";
-    }
+public interface WebDriverConfig extends Config {
 
-    public Browser getBrowser(){
-        String browser = System.getProperty("browser");
-        return Browser.valueOf(browser);
-    }
+    // Реализации Библиотеки Owner в этом файле.
+    // В классе LegacyWebDriverConfig устаревшая реализация без библиотеки Owner.
+
+
+    @Key("baseUrl")
+    @DefaultValue("https://github.com")
+    String getBaseUrl();
+
+    @Key("browser")
+    @DefaultValue("CHROME")
+    Browser getBrowser();
+
+    // зачитываем данные из командной строки
+    @Key("remoteUrl")
+    // обрабатывает дефолтное значение
+    @Config.DefaultValue("http://localhost:4444/wd/hub")
+    // конвертируем в возращаемый тип
+    URL getRemoteUrl();
 
 }

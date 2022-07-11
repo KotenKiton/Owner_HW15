@@ -13,4 +13,7 @@ public interface TypesConfig extends Config {
     @Key("boolean")
     Boolean getBoolean();
 
+    @Key("enum")
+    Browser getEnum();
+
 }

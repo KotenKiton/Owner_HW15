@@ -21,7 +21,7 @@ public interface WebDriverConfig extends Config {
     // зачитываем данные из командной строки
     @Key("remoteUrl")
     // обрабатывает дефолтное значение
-    @Config.DefaultValue("http://localhost:4444/wd/hub")
+    @Config.DefaultValue("https://localhost:4444/wd/hub")
     // конвертируем в возращаемый тип
     URL getRemoteUrl();
 

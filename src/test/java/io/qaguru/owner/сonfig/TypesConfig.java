@@ -2,6 +2,8 @@ package io.qaguru.owner.сonfig;
 
 import org.aeonbits.owner.Config;
 
+import java.net.URL;
+
 public interface TypesConfig extends Config {
 
     @Key("integer")
@@ -15,5 +17,8 @@ public interface TypesConfig extends Config {
 
     @Key("enum")
     Browser getEnum();
+
+    @Key("url")
+    URL getURL();
 
 }
